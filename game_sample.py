@@ -38,11 +38,14 @@ def main():
     # 現在選択されているマス
     selected = (0, 0)
 
-    running = True
-    while running:
+    while True:
+        # 画面を描画する
+        draw(screen, board, selected)
+        pygame.display.update()
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                running = False
+                pygame.quit()
+                sys.exit()
             if event.type == pygame.KEYDOWN:
                 key = pygame.key.get_pressed()
                 (x, y) = selected
@@ -72,11 +75,6 @@ def main():
                             player = "WHITE"
                         else:
                             player = "BLACK"
-            draw(screen, board, selected)
-            pygame.display.update()
-
-    pygame.quit()
-    sys.exit()
 
 
 # 描画する関数

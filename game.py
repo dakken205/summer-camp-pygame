@@ -1,6 +1,7 @@
 import sys
 import pygame
 
+# スクリーンのサイズ
 SCREEN_SIZE = (560, 560)
 # オセロのボードの1つのマスのサイズ
 CELL_SIZE = (70, 70)
@@ -28,38 +29,14 @@ def main():
     # 現在選択されているマス
     selected = (0, 0)
 
-    running = True
-    while running:
+    while True:
+        # 画面を描画する
+        draw(screen, board, selected)
+        pygame.display.update()
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                running = False
-            if event.type == pygame.KEYDOWN:
-                key = pygame.key.get_pressed()
-                (x, y) = selected
-                if key[pygame.K_RIGHT]:
-                    pass
-                    # ☆右矢印を押したときの動きを書く☆
-                if key[pygame.K_LEFT]:
-                    pass
-                    # ☆左矢印を押したときの動きを書く☆
-                if key[pygame.K_UP]:
-                    pass
-                    # ☆上矢印を押したときの動きを書く☆
-                if key[pygame.K_DOWN]:
-                    pass
-                    # ☆下矢印を押したときの動きを書く☆
-                if key[pygame.K_RETURN]:
-                    # ひっくり返すことができたら，プレイヤーチェンジする
-                    if flip(board, player, selected):
-                        if player == "BLACK":
-                            player = "WHITE"
-                        else:
-                            player = "BLACK"
-            draw(screen, board, selected)
-            pygame.display.update()
-
-    pygame.quit()
-    sys.exit()
+                pygame.quit()
+                sys.exit()
 
 
 # 描画する関数
