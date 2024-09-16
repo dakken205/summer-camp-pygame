@@ -9,7 +9,7 @@ summer-camp-pygame
 │  README.md
 │  summer_camp_pygame.pdf
 │
-└─images
+└─ images
         test.png
         empty.png
         black.png
