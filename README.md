@@ -16,12 +16,14 @@ summer-camp-pygame
         white.png
 ```
 
-オセロ作成グループの人はコマンドプロンプトで
+---
+
+オセロ作成グループの人はコマンドプロンプトで以下のコマンドを実行してください．
 
 ```
 git clone https://github.com/dakken205/summer-camp-pygame.git
 ```
 
-を実行してください．
+---
 
 それ以外のグループの人は `summer-camp-pygame.pdf` を開き，`Download raw file` をクリックしてください．
